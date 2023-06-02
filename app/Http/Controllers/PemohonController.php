@@ -12,18 +12,17 @@ class PemohonController extends Controller
     public function Dashboard_Pemohon()
     {
         $suratlogistik = SuratLogistik::orderBy('id', 'DESC')->paginate();
-        $day = date('d');
-        $month = date('m');
-        $year = date('Y');
         $countAll = SuratLogistik::whereYear('updated_at', now()->year)->count('status_surat');
-        $countApproved = SuratLogistik::where('status_surat','Yes')->whereYear('updated_at', now()->year)->count('status_surat');
-        $countRejected = SuratLogistik::where('status_surat','No')->whereYear('updated_at', now()->year)->count('status_surat');
+        $countApproved = SuratLogistik::where('status_surat','Approved')->whereYear('updated_at', now()->year)->count('status_surat');
+        $countRejected = SuratLogistik::where('status_surat','Rejected')->whereYear('updated_at', now()->year)->count('status_surat');
+        $countWaiting = SuratLogistik::where('status_surat','Waiting')->whereYear('updated_at', now()->year)->count('status_surat');
         return view('Pemohon.Dashboard_Pemohon', 
         [
             'suratlogistik' => $suratlogistik,
             'countAll' => $countAll,
             'countApproved' => $countApproved,
             'countRejected' => $countRejected,
+            'countWaiting' => $countWaiting,
         ]);
     }
     public function Surat_Pengajuan_Logistik()
@@ -41,7 +40,7 @@ class PemohonController extends Controller
             'nama_barang' => $request -> nama_barang,
             'jumlah_barang' => $request -> jumlah_barang,
             'total_harga' => $request -> total_harga,
-            'status_surat' => 'No',
+            'status_surat' => 'Waiting',
         ]);
         return redirect('Dashboard-pemohon');
     }

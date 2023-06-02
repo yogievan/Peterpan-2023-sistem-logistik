@@ -59,10 +59,10 @@
           <fieldset disabled>
             <div class="form-floating mt-3">
               <label for="floatingInput"><b>Status Surat</b></label>
-              <input type="text" name="status_surat" class="form-control" value="No">
+              <input type="text" name="status_surat" class="form-control" value="-">
             </div>
           </fieldset>
-          <p class="text-danger mt-1">&nbsp *Status surat diisi oleh Rektor atau Wakil Rektor 3</p>
+          <p class="text-danger mt-1">&nbsp *Status surat diisi oleh Rektor atau Wakil Rektor 3 (Approved or Rejected)</p>
       </div>
       <div class="form-floating mt-4">
         <button class="btn btn-lg btn-danger" type="submit">Create Surat Pemohonan Logistik</button>

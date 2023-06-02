@@ -102,6 +102,32 @@
           </div>
         </div>
       </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                    <i class="fas fa-clock text-danger"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Waitting Logistics order letter</p>
+                  <p class="card-title"><b>{{$countWaiting}} Surat</b><p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-calendar"></i>
+              Dalam 1 Tahun
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="row">
