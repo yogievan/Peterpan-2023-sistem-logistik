@@ -44,12 +44,19 @@ Route::controller(LogistikController::class)->group(function(){
 Route::controller(RektorController::class)->group(function(){
     Route::get('/Dashboard-Rektor', 'Dashboard_Rektor');
     Route::get('/Aproval-surat-permohonan-logistik-Rektor', 'Approval_Rektor');
+    Route::get('/Detail-surat-permohonan-logistik-Rektor-{id}', 'View_Approval_Rektor');
+    Route::put('/Approved-Surat-permohonan-logistik-Rektor-{id}', 'UpdateApproved_Approval_Rektor');
+    Route::put('/Reject-Surat-permohonan-logistik-Rektor-{id}', 'UpdateRejected_Approval_Rektor');
+
 });
 
 //WR3
 Route::controller(Wr3Controller::class)->group(function(){
     Route::get('/Dashboard-Wr3','Dashboard_Wr3');
     Route::get('/Aproval-surat-permohonan-logistik-WR3', 'Approval_Wr3');
+    Route::get('/Detail-surat-permohonan-logistik-WR3-{id}', 'View_Approval_WR3');
+    Route::put('/Approved-Surat-permohonan-logistik-WR3-{id}', 'UpdateApproved_Approval_WR3');
+    Route::put('/Reject-Surat-permohonan-logistik-WR3-{id}', 'UpdateRejected_Approval_WR3');
 });
 
 //BIRO2

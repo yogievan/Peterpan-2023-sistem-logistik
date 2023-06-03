@@ -16,12 +16,10 @@ class LogistikController extends Controller
     public function Dashboard_Logistik()
     {
         $transaksilogistik = TransaksiLogistik::orderBy('id', 'DESC')->paginate();
-        $day = date('d');
-        $month = date('m');
-        $year = date('Y');
         $countAll = SuratLogistik::whereYear('updated_at', now()->year)->count('status_surat');
-        $countApproved = SuratLogistik::where('status_surat','Yes')->whereYear('updated_at', now()->year)->count('status_surat');
-        $countRejected = SuratLogistik::where('status_surat','No')->whereYear('updated_at', now()->year)->count('status_surat');
+        $countApproved = SuratLogistik::where('status_surat','Approved')->whereYear('updated_at', now()->year)->count('status_surat');
+        $countRejected = SuratLogistik::where('status_surat','Rejected')->whereYear('updated_at', now()->year)->count('status_surat');
+        $countWaiting = SuratLogistik::where('status_surat','Waiting')->whereYear('updated_at', now()->year)->count('status_surat');
         $countGoods = Barang::whereYear('updated_at', now()->year)->count('id');
 
         return view('Logistik.Dashboard_Logistik', 
@@ -31,11 +29,12 @@ class LogistikController extends Controller
             'countApproved' => $countApproved,
             'countRejected' => $countRejected,
             'countGoods' => $countGoods,
+            'countWaiting' => $countWaiting,
         ]);
     }
     public function Order_Logistik()
     {
-        $suratlogistik = SuratLogistik::orderBy('id', 'DESC')->paginate();
+        $suratlogistik = SuratLogistik::orderBy('id', 'DESC')->where('status_surat', 'Approved')->paginate();
         return view('Logistik.Order_Logistik',['suratlogistik' => $suratlogistik]);
     }
     public function Inventaris_Logistik()

@@ -134,7 +134,7 @@
       <div class="col-md-12">
         <div class="card ">
           <div class="card-header ">
-            <h5 class="card-title">List Surat Permohonan Logistik</h5>
+            <h5 class="card-title">List of Logistics order letter</h5>
             <p class="card-category">*Diurutkan berdasarkan Surat Permohonan Logistik terakhir di upload atau dibuat.</p>
           </div>
           <div class="card-body ">
@@ -144,8 +144,8 @@
                   <th scope="col">#ID Surat</th>
                   <th scope="col">Nama Pemohon</th>
                   <th scope="col">Nama Barang / Jasa</th>
-                  <th scope="col">Jumlah Barang / Jasa</th>
-                  <th scope="col">Total Biaya</th>
+                  <th scope="col">Jumlah</th>
+                  <th scope="col">Total Harga</th>
                   <th scope="col">Status Surat</th>
                   <th scope="col">ACTION</th>
               </tr>

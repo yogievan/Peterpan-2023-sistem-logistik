@@ -38,17 +38,17 @@
           <h5 class="card-title"><strong>List Surat Permohonan Logistik</strong></h5>
           <p class="card-category">
             *Diurutkan berdasarkan Surat Permohonan Logistik terakhir di upload atau dibuat oleh Users.
-            <br><b>*Pembuatan Transaksi Pemesanan diperlukan Status Surat 'Yes' karena telah disetujui oleh Rektor / WR 3.</b>
+            <br><b>*Pembuatan Transaksi Pemesanan diperlukan Status Surat 'Approved' karena telah disetujui oleh Rektor / WR 3.</b>
           </p>
         </div>
         <div class="card-body ">
           <table class="table table-striped">
             <thead>
-            <tr class="text-center">
+            <tr>
                 <th scope="col">#ID Surat</th>
                 <th scope="col">Nama Pemohon</th>
                 <th scope="col">Nama Barang / Jasa</th>
-                <th scope="col">Jumlah Barang / Jasa</th>
+                <th scope="col">Jumlah</th>
                 <th scope="col">Total Biaya</th>
                 <th scope="col">Status Surat</th>
                 <th scope="col">ACTION</th>
@@ -62,10 +62,10 @@
                     <td>{{$sl -> nama_barang}}</td>
                     <td>{{$sl -> jumlah_barang}}</td>
                     <td>{{$sl -> total_harga}}</td>
-                    <td>{{$sl -> status_surat}}</td>
+                    <td class="text-uppercase">{{$sl -> status_surat}}</td>
                     <td>
                         <a href="/Create-surat-transaksi-order-logistik-{{ $sl -> id }}" class="btn btn-primary fas fa-file-invoice-dollar" 
-                          title="Create Transactions" onclick="return confirm('Anda Akan Membuat Transaksi Logistik? Penuhi SYARAT terlebih dahulu!')">
+                          title="Create Transactions" onclick="return confirm('Status Surat sudah APPROVED. Apakah anda akan membuat transaksi?')">
                         </a>
                         <a href="/Create-inventaris-logistik-{{ $sl -> id }}" class="btn btn-warning fas fa-warehouse" title="Create Inventory for Goods"></a>
                     </td>

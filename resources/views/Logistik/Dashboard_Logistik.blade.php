@@ -113,6 +113,7 @@
           </div>
         </div>
       </div>
+      
       <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
           <div class="card-body ">
@@ -145,7 +146,7 @@
       <div class="col-md-12">
         <div class="card ">
           <div class="card-header ">
-            <h5 class="card-title">Table List Transactions</h5>
+            <h5 class="card-title">Table List of Transactions</h5>
             <p class="card-category">Per-tanggal {{$date}}</p>
           </div>
           <div class="card-body ">
@@ -155,8 +156,8 @@
                   <th scope="col">#ID</th>
                   <th scope="col">Nama Pemohon</th>
                   <th scope="col">Nama Barang / Jasa</th>
-                  <th scope="col">Jumlah Barang / Jasa</th>
-                  <th scope="col">Total Biaya</th>
+                  <th scope="col">Jumlah</th>
+                  <th scope="col">Total Harga</th>
                   <th scope="col">Status Surat</th>
               </tr>
               </thead>
