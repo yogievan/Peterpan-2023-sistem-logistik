@@ -156,7 +156,6 @@
                   <th scope="col">Jumlah</th>
                   <th scope="col">Total Harga</th>
                   <th scope="col">Status Pengiriman</th>
-                  <th scope="col">Status DP</th>
                   <th scope="col">ACTION</th>
               </tr>
               </thead>
@@ -169,10 +168,14 @@
                       <td>{{$tl -> jumlah_barang}}</td>
                       <td>{{$tl -> total_harga}}</td>
                       <td>{{$tl -> status_pengiriman}}</td>
-                      <td>{{$tl -> status_dp}}</td>
                       <td>
                         <a href="/Detail-Transaksi-{{ $tl -> id }}">
                           <button class="btn btn-warning">Detail</button>
+                        </a>
+                        <a href="/GeneratePDF-Detail-Transaksi-{{ $tl -> id }}">
+                          <button class="btn btn-primary">
+                            Cetak
+                          </button>
                         </a>
                       </td>
                   </tr>

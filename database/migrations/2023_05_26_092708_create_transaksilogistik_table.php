@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('bukti_dp')->nullable();
             $table->string('bukti_lunas')->nullable();
             $table->string('total_bayar')->nullable();
-            $table->string('shipping_doc')->nullable();
+            $table->string('status_pengiriman')->nullable();
             $table->timestamps();
         });
     }

@@ -12,7 +12,6 @@ use App\Models\Barang;
 
 class LogistikController extends Controller
 {
-    //View Pages
     public function Dashboard_Logistik()
     {
         $date = date('d-m-y');
@@ -48,8 +47,6 @@ class LogistikController extends Controller
     {
         return view('Logistik.Create_User');
     }
-
-    //Create
     public function User_Create(Request $request)
     {
         User::create([
@@ -109,8 +106,6 @@ class LogistikController extends Controller
         $transaksilogistik -> save();
         return redirect('Dashboard-logistik');
     }
-
-    //update
     public function update_inventory_logistik($id, Request $request)
     {
         $barang = Barang::find($id);
@@ -123,8 +118,6 @@ class LogistikController extends Controller
         $barang -> save();
         return redirect('Inventaris-logistik');
     }
-
-    //delete
     public function delete_inventory_logistik($id)
     {
         $barang = Barang::find($id);

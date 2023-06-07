@@ -8,6 +8,8 @@ use App\Http\Controllers\LogistikController;
 use App\Http\Controllers\RektorController;
 use App\Http\Controllers\Wr3Controller;
 use App\Http\Controllers\Biro2Controller;
+use App\Http\Controllers\PDFController;
+
 
 //login
 Route::controller(AuthController::class)->group(function(){
@@ -76,8 +78,13 @@ Route::controller(Biro2Controller::class)->group(function(){
 //Pemasok
 Route::controller(PemasokController::class)->group(function(){
     Route::get('/Dashboard-Pemasok', 'Dashboard_Pemasok');
-    Route::get('/Shipping-Documents', 'Shipping_Documents');
-    Route::get('/Detail-Shippingdocument-{id}', 'View_Shipping_Documents');
-    Route::put('/proses-shipping-document-{id}', 'Proses_Shipping_Documents');
+    Route::get('/Status-Goods', 'Status_Goods');
+    Route::get('/Detail-status-pengiriman-barang-{id}', 'View_Status_pengiriman');
+    Route::put('/proses-status-goods-document-{id}', 'Proses_Status_pengiriman');
     Route::get('/Detail-document-transaction-{id}', 'Detail_Transaction');
+});
+
+//Generate PDF
+Route::controller(PDFController::class)->group(function(){
+    Route::get('/GeneratePDF-Detail-Transaksi-{id}', 'Generate_PDF_Detail_Transaction');
 });

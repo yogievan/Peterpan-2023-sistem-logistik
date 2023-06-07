@@ -1,5 +1,5 @@
 @extends('Layouts.Dashboard_Template')
-@section('title', 'SHIPPING DOCUMENTS')
+@section('title', 'STATUS GOODS')
 @section('menu')
 <ul class="nav">
     <li>
@@ -9,14 +9,14 @@
         </a>
       </li>
       <li class="active">
-        <a href="/Shipping-Documents">
+        <a href="/Status-Goods">
           <i class="fas fa-shipping-fast"></i>
-          <p><b>Shipping Documents</b></p>
+          <p><b>Status Goods</b></p>
         </a>
       </li>
   </ul>
 @endsection
-@section('pages_title', 'Form Shipping Documents')
+@section('pages_title', 'List of Transaction Documents')
 @section('contents')
 <div class="content">
   <div class="row">
@@ -50,10 +50,15 @@
                     <td>Rp. {{$tl -> pembayaran_lunas}} <br> <b>{{ $tl -> status_lunas }}</b></td>
                     <td><b>Rp. {{$tl -> total_bayar}}</b></td>
                     <td>
-                      <a href="/Detail-Shippingdocument-{{ $tl -> id }}">
+                      <a href="/Detail-status-pengiriman-barang-{{ $tl -> id }}">
                       <button class="btn btn-warning">
                         Detail
                       </button>
+                      </a>
+                      <a href="/GeneratePDF-Detail-Transaksi-{{ $tl -> id }}">
+                        <button class="btn btn-primary">
+                          Cetak
+                        </button>
                       </a>
                     </td>
                 </tr>

@@ -9,9 +9,9 @@
       </a>
     </li>
     <li>
-      <a href="/Shipping-Documents">
+      <a href="/Status-Goods">
         <i class="fas fa-shipping-fast"></i>
-        <p><b>Shipping Documents</b></p>
+        <p><b>Status Goods</b></p>
       </a>
     </li>
 </ul>
@@ -37,6 +37,13 @@
             </div>
           </div>
         </div>
+        <div class="card-footer ">
+          <hr>
+          <div class="stats">
+            <i class="fa fa-calendar"></i>
+            Until {{$date}}
+          </div>
+        </div>
       </div>
     </div>
 
@@ -55,6 +62,13 @@
                   <p class="card-title"><b>{{ $countTransaction }} Transactions</b><p>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-calendar"></i>
+              Jumlah transaksi yang masuk
             </div>
           </div>
         </div>
@@ -78,6 +92,7 @@
                 <th scope="col">Status DP</th>
                 <th scope="col">Status Lunas</th>
                 <th scope="col">Total Bayar</th>
+                <th scope="col">Status Barang</th>
                 <th scope="col">ACTION</th>
             </tr>
             </thead>
@@ -91,6 +106,7 @@
                     <td>{{$tl -> status_dp}}</td>
                     <td>{{$tl -> status_lunas}}</td>
                     <td><b>Rp. {{$tl -> total_bayar}}</b></td>
+                    <td><b>{{$tl -> status_pengiriman}}</b></td>
                     <td>
                       <a href="/Detail-document-transaction-{{ $tl -> id }}">
                         <button class="btn btn-warning">Detail</button></a>

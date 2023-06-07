@@ -70,18 +70,39 @@
                 <label class="text-dark">Total Harga Barang atau Jasa</label>
                 <h5 class="text-uppercase"><b>Rp. {{ $transaksilogistik -> total_harga }}</b></h5>
               </div>
-              <div class="mt-2">
-                <label class="text-dark">Total Down Payment (DP)</label>
-                <h5 class="text-uppercase"><b>Rp. {{ $transaksilogistik -> pembayaran_dp }}</b></h5>
-              </div>
-              <div class="mt-2">
-                <label class="text-dark">Full Payment</label>
-                <h5 class="text-uppercase"><b>Rp. {{ $transaksilogistik -> pembayaran_lunas }}</b></h5>
+              <div class="row mt-2">
+                <div class="col-4">
+                  <label class="text-dark">Total Down Payment (DP)</label>
+                  <h5 class="text-uppercase"><b>Rp. {{ $transaksilogistik -> pembayaran_dp }}</b></h5>
+                </div>
+                <div class="col">
+                  <label class="text-dark">Full Payment</label>
+                  <h5 class="text-uppercase"><b>Rp. {{ $transaksilogistik -> pembayaran_lunas }}</b></h5>
+                </div>
               </div>
               <div class="row">
-                <div class="col">
-                    <p class="card-category text-danger">Note: *Bila nominal <b>Total DP</b> telah tertera maka menunggu barang sampai.</p>
+                <div class="col"></div>
+                <div class="col-4">
+                  <label class="text-dark">Total Bayar</label>
+                  <h5 class="text-uppercase"><b>Rp. {{ $transaksilogistik -> total_bayar }}</b></h5>
                 </div>
+              </div>
+              <div class="mt-2">
+                <h4 class="text-dark">Bukti Bayar</h4>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <label class="text-dark">Bukti Bayar Down Payment (DP)</label>
+                  <img src="../assets/img/Bukti_Bayar/{{ $transaksilogistik -> bukti_dp }}" alt="Bukti Down Payment">
+                </div>
+                <div class="col">
+                  <label class="text-dark">Bukti Bayar Full Payment (Pelunasan)</label>
+                  <img src="../assets/img/Bukti_Bayar/{{ $transaksilogistik -> bukti_lunas }}" alt="Bukti Full Payment">
+                </div>
+              </div>
+              <div class="mt-2 form-group">
+                <label class="text-dark">Status Pengiriman Barang</label>
+                <h5><b>{{ $transaksilogistik -> status_pengiriman}}</b></h5>
               </div>
               <div class="row">
                 <div class="col-2">

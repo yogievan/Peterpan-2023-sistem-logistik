@@ -26,6 +26,6 @@ class TransaksiLogistik extends Model
         'bukti_dp',
         'bukti_lunas',
         'total_bayar',
-        'shipping_doc',
+        'status_pengiriman',
     ];
 }

@@ -9,14 +9,14 @@
         </a>
       </li>
       <li class="active">
-        <a href="/Shipping-Documents">
+        <a href="/Status-Goods">
           <i class="fas fa-shipping-fast"></i>
-          <p><b>Shipping Documents</b></p>
+          <p><b>Status Goods</b></p>
         </a>
       </li>
   </ul>
 @endsection
-@section('pages_title', 'Form Shipping Documents')
+@section('pages_title', 'Detail Status Goods and Documents')
 @section('contents')
 <div class="content">
   <div class="row">
@@ -60,18 +60,20 @@
             </div>
             <div class="row mt-2">
               <div class="col-4">
-                <label class="text-dark">Total Down Payment</label>
+                <label class="text-dark">Total Down Payment (DP)</label>
                 <h5 class="text-uppercase"><b>Rp. {{ $transaksilogistik -> pembayaran_dp }}</b></h5>
               </div>
-              <div class="col-4">
-                <label class="text-dark">Total FULL Payment</label>
+              <div class="col">
+                <label class="text-dark">Full Payment</label>
                 <h5 class="text-uppercase"><b>Rp. {{ $transaksilogistik -> pembayaran_lunas }}</b></h5>
               </div>
-              <div class="col"></div>
             </div>
-            <div class="mt-2">
-              <label class="text-dark">Total Bayar</label>
-              <h5 class="text-uppercase"><b>Rp. {{ $transaksilogistik -> total_bayar }}</b></h5>
+            <div class="row">
+              <div class="col"></div>
+              <div class="col-4">
+                <label class="text-dark">Total Bayar</label>
+                <h5 class="text-uppercase"><b>Rp. {{ $transaksilogistik -> total_bayar }}</b></h5>
+              </div>
             </div>
             <div class="mt-2">
               <h4 class="text-dark">Bukti Bayar</h4>
@@ -87,12 +89,8 @@
               </div>
             </div>
             <div class="mt-2 form-group">
-              <h4 class="text-dark">File Manifest / Shipping Documents</h4>
-              <p>Nama File Manifest / Shipping Documents :</p>
-              <a href="/unduh-shipping-doc-{{ $transaksilogistik -> id }}">
-                {{ $transaksilogistik -> shipping_doc }}
-                <button class="m-2 btn btn-primary">UNDUH</button>
-              </a>
+              <label class="text-dark">Status Pengiriman Barang</label>
+              <h5><b>{{ $transaksilogistik -> status_pengiriman}}</b></h5>
             </div>
           </div>
         </div>

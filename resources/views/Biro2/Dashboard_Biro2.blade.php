@@ -88,11 +88,11 @@
                   <th scope="col">#ID</th>
                   <th scope="col">Nama Pemohon</th>
                   <th scope="col">Nama Barang / Jasa</th>
-                  <th scope="col">Jumlah</th>
-                  <th scope="col">Total Harga</th>
-                  <th scope="col">Status DP</th>
-                  <th scope="col">Status Lunas</th>
+                  <th scope="col">Jumlah/ Total Harga</th>
+                  <th scope="col">Status DP / Status Lunas</th>
+                  <th scope="col">Status Pengiriman</th>
                   <th scope="col">Total Bayar</th>
+                  <th scope="col">ACTION</th>
               </tr>
               </thead>
               <tbody>
@@ -101,11 +101,17 @@
                       <td>{{$tl -> id}}</td>
                       <td>{{$tl -> nama_pemohon}}</td>
                       <td>{{$tl -> nama_barang}}</td>
-                      <td>{{$tl -> jumlah_barang}}</td>
-                      <td>{{$tl -> total_harga}}</td>
-                      <td>{{$tl -> status_dp}}</td>
-                      <td>{{$tl -> status_lunas}}</td>
+                      <td>{{$tl -> jumlah_barang}} pcs <br> Rp.{{$tl -> total_harga}}</td>
+                      <td>{{$tl -> status_dp}} / {{$tl -> status_lunas}}</td>
+                      <td>{{$tl -> status_pengiriman}}</td>
                       <td><b>Rp. {{$tl -> total_bayar}}</b></td>
+                      <td>
+                        <a href="/GeneratePDF-Detail-Transaksi-{{ $tl -> id }}">
+                          <button class="btn btn-primary">
+                            Cetak
+                          </button>
+                        </a>
+                      </td>
                   </tr>
               @endforeach
               </tbody>
