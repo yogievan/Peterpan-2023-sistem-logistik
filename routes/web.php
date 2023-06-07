@@ -38,6 +38,9 @@ Route::controller(LogistikController::class)->group(function(){
     Route::get('/Update-inventaris-logistik-{id}', 'update_inventory_logistik');
     Route::put('/Proses-update-inventory-logistik-{id}', 'proses_update_inventory_logistik');
     Route::get('/Delete-inventory-logistik-{id}', 'delete_inventory_logistik');
+    Route::get('/Detail-Transaksi-{id}', 'detail_transaksi_logistik');
+    Route::put('/Status-barang-sampai-{id}', 'update_detail_transaksi_logistik');
+
 });
 
 //Rektor
@@ -63,6 +66,10 @@ Route::controller(Wr3Controller::class)->group(function(){
 Route::controller(Biro2Controller::class)->group(function(){
     Route::get('/Dashboard-Biro2', 'Dashboard_Biro2');
     Route::get('/Payment-Order-Biro2', 'Payment_Order');
+    Route::get('/Down-payment-Order-Biro2-{id}', 'DP_Detail_payment_Order');
+    Route::get('/Full-payment-Order-Biro2-{id}', 'FULL_Detail_payment_Order');
+    Route::put('/proses-DP-pembayaran-{id}', 'Proses_DP_payment_Order');
+    Route::put('/proses-Lunas-pembayaran-{id}', 'Proses_Lunas_payment_Order');
 });
 
 
@@ -70,4 +77,7 @@ Route::controller(Biro2Controller::class)->group(function(){
 Route::controller(PemasokController::class)->group(function(){
     Route::get('/Dashboard-Pemasok', 'Dashboard_Pemasok');
     Route::get('/Shipping-Documents', 'Shipping_Documents');
+    Route::get('/Detail-Shippingdocument-{id}', 'View_Shipping_Documents');
+    Route::put('/proses-shipping-document-{id}', 'Proses_Shipping_Documents');
+    Route::get('/Detail-document-transaction-{id}', 'Detail_Transaction');
 });

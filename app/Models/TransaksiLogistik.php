@@ -18,7 +18,14 @@ class TransaksiLogistik extends Model
         'total_harga',
         'nama_rektor_wr3',
         'status_surat',
+        'status_pengiriman',
         'pembayaran_dp',
+        'status_dp',
         'pembayaran_lunas',
+        'status_lunas',
+        'bukti_dp',
+        'bukti_lunas',
+        'total_bayar',
+        'shipping_doc',
     ];
 }

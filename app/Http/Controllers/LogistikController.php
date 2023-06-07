@@ -15,13 +15,13 @@ class LogistikController extends Controller
     //View Pages
     public function Dashboard_Logistik()
     {
+        $date = date('d-m-y');
         $transaksilogistik = TransaksiLogistik::orderBy('id', 'DESC')->paginate();
         $countAll = SuratLogistik::whereYear('updated_at', now()->year)->count('status_surat');
         $countApproved = SuratLogistik::where('status_surat','Approved')->whereYear('updated_at', now()->year)->count('status_surat');
         $countRejected = SuratLogistik::where('status_surat','Rejected')->whereYear('updated_at', now()->year)->count('status_surat');
         $countWaiting = SuratLogistik::where('status_surat','Waiting')->whereYear('updated_at', now()->year)->count('status_surat');
         $countGoods = Barang::whereYear('updated_at', now()->year)->count('id');
-
         return view('Logistik.Dashboard_Logistik', 
         [
             'transaksilogistik'=>$transaksilogistik,
@@ -30,6 +30,8 @@ class LogistikController extends Controller
             'countRejected' => $countRejected,
             'countGoods' => $countGoods,
             'countWaiting' => $countWaiting,
+            'date' => $date,
+
         ]);
     }
     public function Order_Logistik()
@@ -93,6 +95,21 @@ class LogistikController extends Controller
         ]);
         return redirect('Inventaris-logistik');
     }
+    public function detail_transaksi_logistik($id)
+    {
+        $transaksilogistik = TransaksiLogistik::find($id);
+        return view('Logistik.Detail_Transaksi',[
+            'transaksilogistik'=>$transaksilogistik,
+        ]);
+    }
+    public function update_detail_transaksi_logistik($id, Request $request)
+    {
+        $transaksilogistik = TransaksiLogistik::find($id);
+        $transaksilogistik -> status_pengiriman = $request -> status_pengiriman_sampai;
+        $transaksilogistik -> save();
+        return redirect('Dashboard-logistik');
+    }
+
     //update
     public function update_inventory_logistik($id, Request $request)
     {

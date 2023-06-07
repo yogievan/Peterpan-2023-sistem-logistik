@@ -41,10 +41,7 @@
             <hr>
             <div class="stats">
               <i class="fa fa-calendar"></i>
-              <div class="stats">
-                <i class="fa fa-calendar"></i>
-                Dalam 1 Tahun
-              </div>
+              Dalam 1 Tahun
             </div>
           </div>
         </div>

@@ -23,8 +23,15 @@ return new class extends Migration
             $table->integer('total_harga');
             $table->string('nama_rektor_wr3');
             $table->string('status_surat');
+            $table->string('status_pengiriman')->nullable();
             $table->string('pembayaran_dp')->nullable();
+            $table->string('status_dp')->nullable();
             $table->string('pembayaran_lunas')->nullable();
+            $table->string('status_lunas')->nullable();
+            $table->string('bukti_dp')->nullable();
+            $table->string('bukti_lunas')->nullable();
+            $table->string('total_bayar')->nullable();
+            $table->string('shipping_doc')->nullable();
             $table->timestamps();
         });
     }

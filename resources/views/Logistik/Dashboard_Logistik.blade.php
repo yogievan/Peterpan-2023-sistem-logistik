@@ -53,9 +53,6 @@
             <hr>
             <div class="stats">
               <i class="fa fa-calendar"></i>
-              @php
-                  $date = date('d-m-y');
-              @endphp
               Dalam 1 Tahun
             </div>
           </div>
@@ -158,7 +155,9 @@
                   <th scope="col">Nama Barang / Jasa</th>
                   <th scope="col">Jumlah</th>
                   <th scope="col">Total Harga</th>
-                  <th scope="col">Status Surat</th>
+                  <th scope="col">Status Pengiriman</th>
+                  <th scope="col">Status DP</th>
+                  <th scope="col">ACTION</th>
               </tr>
               </thead>
               <tbody>
@@ -169,7 +168,13 @@
                       <td>{{$tl -> nama_barang}}</td>
                       <td>{{$tl -> jumlah_barang}}</td>
                       <td>{{$tl -> total_harga}}</td>
-                      <td>{{$tl -> status_surat}}</td>
+                      <td>{{$tl -> status_pengiriman}}</td>
+                      <td>{{$tl -> status_dp}}</td>
+                      <td>
+                        <a href="/Detail-Transaksi-{{ $tl -> id }}">
+                          <button class="btn btn-warning">Detail</button>
+                        </a>
+                      </td>
                   </tr>
               @endforeach
               </tbody>

@@ -5,7 +5,7 @@
           <h5 class="card-title">About Application!</h5>
         </div>
         <div class="card-body">
-          <p>Sistem Informasi Logistik dirancang khusus untuk mengelola dan 
+          <p class="text-justify"><b>Sistem Informasi Logistik</b> dirancang khusus untuk mengelola dan 
             memantau proses logistik dalam suatu organisasi. Tujuan utama dari 
             sistem informasi logistik adalah meningkatkan efisiensi, kecepatan, dan 
             keakuratan operasi logistik serta memberikan visibilitas yang lebih baik 
