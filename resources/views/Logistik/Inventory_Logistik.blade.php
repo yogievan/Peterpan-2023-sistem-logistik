@@ -63,6 +63,7 @@
             @endforeach
             </tbody>
         </table>
+        <span class="container-fluid">{{$barang -> links()}}</span>
         </div>
       </div>
     </div>

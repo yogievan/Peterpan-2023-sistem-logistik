@@ -11,7 +11,7 @@
     <li class="active">
       <a href="/Surat-pengajuan-logistik">
         <i class="fas fa-paste"></i>
-        <p><b>Pengajuan Logistik</b></p>
+        <p><b>Logistics Order Letter</b></p>
       </a>
     </li>
   </ul>
@@ -25,7 +25,7 @@
       <div class="form-floating mt-2">
           <div class="form-floating">
               <label for="floatingInput"><b>Nama Lengkap Pemohon</b></label>
-              <input type="text" name="nama_pemohon" class="form-control" id="floatingInput" placeholder="Nama Lengkap Pemohon" required>
+              <input type="text" name="nama_pemohon" class="form-control" id="floatingInput" placeholder="Nama Lengkap Pemohon" value="{{Auth::user() -> nama_user ?? ''}}" required>
           </div>
           <div class="form-floating mt-2">
             <label for="floatingInput"><b>Tipe Kategori barang / Jasa</b></label>

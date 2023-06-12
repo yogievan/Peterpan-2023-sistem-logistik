@@ -182,6 +182,7 @@
               @endforeach
               </tbody>
             </table>
+            <span class="container-fluid">{{$transaksilogistik -> links()}}</span>
           </div>
         </div>
       </div>

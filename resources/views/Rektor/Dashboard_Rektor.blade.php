@@ -160,6 +160,7 @@
             @endforeach
             </tbody>
           </table>
+          <span class="container-fluid">{{$suratlogistik -> links()}}</span>
         </div>
       </div>
     </div>

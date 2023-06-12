@@ -11,7 +11,7 @@
     <li class="active">
       <a href="/Surat-pengajuan-logistik">
         <i class="fas fa-paste"></i>
-        <p><b>Pengajuan Logistik</b></p>
+        <p><b>Logistics Order Letter</b></p>
       </a>
     </li>
   </ul>
