@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\TransaksiLogistik;
 use App\Models\SuratLogistik;
+use Illuminate\support\Facades\Auth;
 
 class Biro2Controller extends Controller
 {

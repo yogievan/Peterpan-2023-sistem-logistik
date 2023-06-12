@@ -70,7 +70,7 @@
                   <div class="row">
                     <div class="col">
                       <label class="text-dark">Total Full Payment</label>
-                      <input type="text" name="pembayaran_lunas" class="form-control" placeholder="Nominal Bayar">
+                      <input type="text" name="pembayaran_lunas" class="form-control" placeholder="Nominal Bayar" value="{{$transaksilogistik -> total_harga - $transaksilogistik -> pembayaran_dp}}">
                       <input type="text" name="pembayaran_dp" class="form-control" placeholder="Nominal Bayar" value="{{$transaksilogistik -> pembayaran_dp }}" hidden> 
                       <input type="text" name="status_lunas" class="form-control" placeholder="Nominal Bayar" value="Complate" hidden>
                       <input type="text" name="status_dp"  class="form-control" placeholder="Nominal Bayar" value="Complate" hidden>

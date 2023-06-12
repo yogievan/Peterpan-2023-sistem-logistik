@@ -42,13 +42,13 @@
                 <hr>
                 <div class="form-floating">
                     <label for="floatingInput">Jabatan User</label>
-                    <select name="jabatan" class="form-control" required>
-                        <option value="Pemohon" selected>Pemohon</option>
-                        <option value="Pemasok">Pemasok</option>
-                        <option value="Logistik">Logistik</option>
-                        <option value="Rektor">Rektor</option>
-                        <option value="WR3">WR3</option>
-                        <option value="Biro2">Biro2</option>
+                    <select name="role" class="form-control" required>
+                        <option value="pemohon" selected>Pemohon</option>
+                        <option value="pemasok">Pemasok</option>
+                        <option value="logistik">Logistik</option>
+                        <option value="rektor">Rektor</option>
+                        <option value="wr3">WR3</option>
+                        <option value="biro2">Biro2</option>
                     </select>
                 </div>
                 <hr>

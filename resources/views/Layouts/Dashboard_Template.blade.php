@@ -62,11 +62,11 @@
             <a class="navbar-brand" href="javascript:;"><b>@yield('pages_title', 'TANPA PAGES TITLE')</b></a>
           </div>
           <div>
-            <div class="row text-center">
+            <div class="row">
               <div class="col">
-                <h5>USERNAME</h5>
+                <p> {{Auth::user() -> nama_user ?? ''}} </p>
               </div>
-              <div class="col">
+              <div class="col text-center">
                 <a href="/logout"><button class="btn btn-danger">LOGOUT</button></a>
               </div>
             </div>

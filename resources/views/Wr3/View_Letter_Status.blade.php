@@ -55,7 +55,7 @@
                     @csrf
                     @method('PUT')
                     <input type="text" name="status_surat_approved" value="Approved" hidden>
-                    <button class="btn btn-suc text-uppercase">Approved</button>
+                    <button class="btn btn-success text-uppercase">Approved</button>
                   </form>
                 </div>
 

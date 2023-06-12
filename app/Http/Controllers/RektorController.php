@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SuratLogistik;
 use App\Models\TransaksiLogistik;
+use Illuminate\support\Facades\Auth;
 
 class RektorController extends Controller
 {

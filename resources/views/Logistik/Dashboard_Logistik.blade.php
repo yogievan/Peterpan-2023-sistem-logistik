@@ -53,7 +53,7 @@
             <hr>
             <div class="stats">
               <i class="fa fa-calendar"></i>
-              Dalam 1 Tahun
+              Total seluruh surat order logistik dalam 1 tahun.
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
             <hr>
             <div class="stats">
               <i class="fa fa-calendar"></i>
-              Dalam 1 Tahun
+              Jumlah surat yang diterima (status Approved) Dalam 1 tahun.
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@
             <hr>
             <div class="stats">
               <i class="fa fa-calendar"></i>
-              Dalam 1 Tahun
+              Jumlah surat yang ditolak (status Rejected) Dalam 1 tahun.
             </div>
           </div>
         </div>
@@ -132,7 +132,7 @@
             <hr>
             <div class="stats">
               <i class="fa fa-calendar"></i>
-              Dalam 1 Tahun
+              Jumlah barang yang diorder dan memiliki status surat <b>APPROVED</b> 
             </div>
           </div>
         </div>

@@ -10,56 +10,45 @@ class AuthController extends Controller
 {
     public function login()
     {
-        // if($user = Auth::user()){
-        //     if($user->jabatan == 'Pemohon'){
-        //         return redirect()->intended('pemohon');
-        //     }elseif($user->jabatan == 'Pemasok'){
-        //         return redirect()->intended('pemasok');
-        //     }elseif($user->jabatan == 'Logistik'){
-        //         return redirect()->intended('logistik');
-        //     }elseif($user->jabatan == 'Rektor'){
-        //         return redirect()->intended('rektor');
-        //     }elseif($user->jabatan == 'Wr3'){
-        //         return redirect()->intended('wr3');
-        //     }elseif($user->jabatan == 'Biro2'){
-        //         return redirect()->intended('biro2');
-        //     }
-        // }
         return view('Auth.Login');
     }
 
-    public function Proseslogin(Request $request)
+    public function authenticate(Request $request)
     {
-        $request->validate([
+        $credentials = $request->validate([
             'username' => 'required',
             'password' => 'required',
         ]);
 
-        $input = $request->only('username','password');
-        if(Auth::attempt($input)){
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             $user = Auth::user();
-            if($user->jabatan == 'Pemohon'){
-                return redirect()->intended('Dashboard_Pemohon');
-            }elseif($user->jabatan == 'Pemasok'){
-                return redirect()->intended('Dashboard_Pemasok');
-            }elseif($user->jabatan == 'Logistik'){
-                return redirect()->intended('Dashboard_Logistik');
-            }elseif($user->jabatan == 'Rektor'){
-                return redirect()->intended('Dashboard_Rektor');
-            }elseif($user->jabatan == 'Wr3'){
-                return redirect()->intended('Dashboard_Wr3');
-            }elseif($user->jabatan == 'Biro2'){
-                return redirect()->intended('Dashboard_Biro2');
-            }
             
-            return redirect()->intended('/');
+            if($user -> role == 'pemohon'){
+                return redirect()->intended('/Dashboard-pemohon');
+            }
+            if($user-> role == 'pemasok'){
+                return redirect()->intended('/Dashboard-Pemasok');
+            }
+            if($user->role == 'logistik'){
+                return redirect()->intended('/Dashboard-logistik');
+            }
+            if($user->role == 'rektor'){
+                return redirect()->intended('/Dashboard-Rektor');
+            }
+            if($user->role == 'wr3'){
+                return redirect()->intended('/Dashboard-Wr3');
+            }
+            if($user->role == 'biro2'){
+                return redirect()->intended('/Dashboard-Biro2');
+            }
         }
 
         return back()->withErrors([
-            'username' => 'Maaf Username atau Password anda Salah'
-        ])->onlyInput('username');
+            'username' => 'Login Field!'
+        ]);
     }
+
     public function logout(Request $request)
     {
         Auth::logout();

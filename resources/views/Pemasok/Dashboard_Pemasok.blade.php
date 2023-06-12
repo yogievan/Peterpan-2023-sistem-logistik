@@ -41,7 +41,7 @@
           <hr>
           <div class="stats">
             <i class="fa fa-calendar"></i>
-            Until {{$date}}
+            Total seluruh surat order logistik dalam 1 tahun.
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@
             <hr>
             <div class="stats">
               <i class="fa fa-calendar"></i>
-              Jumlah transaksi yang masuk
+              Total seluruh transaksi order logistik dalam 1 tahun.
             </div>
           </div>
         </div>

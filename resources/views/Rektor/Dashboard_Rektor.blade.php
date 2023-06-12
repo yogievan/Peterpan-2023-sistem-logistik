@@ -41,10 +41,7 @@
           <hr>
           <div class="stats">
             <i class="fa fa-calendar"></i>
-            @php
-                $date = date('d-m-y');
-            @endphp
-            Dalam 1 Tahun
+            Total seluruh surat order logistik dalam 1 tahun.
           </div>
         </div>
       </div>
@@ -70,7 +67,7 @@
           <hr>
           <div class="stats">
             <i class="fa fa-calendar"></i>
-            Dalam 1 Tahun
+            Jumlah surat yang diterima oleh rektor (status Approved) Dalam 1 tahun.
           </div>
         </div>
       </div>
@@ -96,7 +93,7 @@
           <hr>
           <div class="stats">
             <i class="fa fa-calendar"></i>
-            Dalam 1 Tahun
+            Jumlah surat yang ditolak oleh rektor (status Rejected) Dalam 1 tahun.
           </div>
         </div>
       </div>
@@ -122,7 +119,8 @@
           <hr>
           <div class="stats">
             <i class="fa fa-calendar"></i>
-            Dalam 1 Tahun
+            Jumlah surat yang belum ada status surat / menunggu 
+            persetujuan oleh rektor (status Waitting) Dalam 1 tahun.
           </div>
         </div>
       </div>

@@ -73,49 +73,50 @@
 
     <!-- konten -->
     <div class="container-fluid">
-        <div class="card-stats">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+          <div class="card-stats">
             <div class="card">
-                <div class="card-body">
-                    <main class="form-signin">
-                        <form action="{{ url('/proses-login') }}" method="post">
-                          @csrf
-                            <div class="text-center">
-                                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-                            </div>
-                      
-                            <div class="form-floating">
-                                <label for="floatingInput">Username</label>
-                                <input autofocus type="text" name="username" class="form-control
-                                @error('username')
-                                    is-invalid
-                                @enderror
-                                " placeholder="Username">
-                            </div>
-                            @error('username')
-                                {{$message}}
-                            @enderror
-
-                            <div class="form-floating">
-                                <label for="floatingPassword">Password</label>
-                                <input type="password" name="password" class="form-control
-                                @error('password')
-                                    is-invalid
-                                @enderror
-                                " placeholder="Password">
-                            </div>
-                            @error('password')
-                                {{$message}}
-                            @enderror
-                            <button class="w-100 btn btn-lg btn-danger" type="submit">Sign in</button>
-                        </form>
-                    </main>
-                </div>
+              <div class="card-body">
+                <main class="form-signin">
+                  <form action="/proses-login" method="post">
+                    @csrf
+                      @error('username')
+                        <div class="alert alert-warning text-dark" role="alert">
+                          {{$message}}
+                        </div>
+                      @enderror
+        
+                      <div class="text-center">
+                          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                      </div>
+                  
+                      <div class="form-floating">
+                          <label for="floatingInput">Username</label>
+                          <input autofocus type="text" name="username" class="form-control
+                          @error('username')
+                            is-invalid
+                          @enderror" placeholder="Username" autofocus required>
+                      </div>
+        
+                      <div class="form-floating">
+                          <label for="floatingPassword">Password</label>
+                          <input type="password" name="password" class="form-control
+                          @error('username')
+                            is-invalid
+                          @enderror" placeholder="Password" required>
+                      </div>
+                      <button class="w-100 btn btn-lg btn-dark" type="submit">Sign in</button>
+                  </form>
+                </main>
+                @include('Layouts.about')
+              </div>
             </div>
-            <footer>
-                <h4>About!</h4><hr>
-                <p>Sistem Information fo Logistics in Universitas Kristen Duta Wacana Yogyakarta</p>
-            </footer>
+          </div>
         </div>
+        <div class="col"></div>
+      </div>
     </div>
     <!-- konten -->
     

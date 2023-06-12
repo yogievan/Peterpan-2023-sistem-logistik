@@ -8,6 +8,7 @@ use App\Models\SuratLogistik;
 use App\Models\TransaksiLogistik;
 use App\Models\Kategori;
 use App\Models\Barang;
+use Illuminate\support\Facades\Auth;
 
 
 class LogistikController extends Controller
@@ -51,11 +52,11 @@ class LogistikController extends Controller
     {
         User::create([
             'nama_user' => $request -> nama_user,
-            'jabatan' => $request -> jabatan,
+            'role' => $request -> role,
             'username' => $request -> username,
-            'password' => md5($request -> password),
+            'password' => bcrypt($request -> password),
         ]);
-        return view('Logistik.Dashboard_Logistik');
+        return redirect('Dashboard-logistik');
     }
     public function View_Create_Transaksi_Logistik($id)
     {
