@@ -20,12 +20,12 @@
             <p><b>Inventory</b></p>
         </a>
     </li>
-    <li class="active">
+    {{-- <li class="active">
         <a href="/Create-user">
             <i class="fas fa-users"></i>
             <p><b>Create Users</b></p>
         </a>
-    </li>
+    </li> --}}
 </ul>
 @endsection
 @section('pages_title', 'Create Users Pemohon')

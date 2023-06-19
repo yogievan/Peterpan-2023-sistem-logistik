@@ -97,7 +97,7 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-success text-uppercase" onclick="return confirm('Pastikan Telah Melakukan Down Payment (DP)')">Prosses Goods</button>
+              <button class="btn btn-success text-uppercase" onclick="return confirm('Pastikan Telah Melakukan Down Payment (DP)')">Process Goods</button>
             </form>
           </div>
         </div>

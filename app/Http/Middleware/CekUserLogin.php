@@ -20,11 +20,5 @@ class CekUserLogin
         if(!Auth::check()){
             return redirect('login');
         }
-        
-        $user = Auth::user();
-        if($user->jabatan == $rules)
-            return $next($request);
-            
-            return redirect('login')->with('error','Anda Tidak Memiliki Akses!');
     }
 }

@@ -14,5 +14,7 @@ class Barang extends Model
         'nama_barang',
         'nama_kategori',
         'jumlah_barang',
+        'total_harga',
+        'tgl_pembelian',
     ];
 }

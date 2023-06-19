@@ -63,13 +63,13 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::group(['middleware' => ['auth']], function () {
-    //WR3
+    //WR2
     Route::controller(Wr3Controller::class)->group(function(){
-        Route::get('/Dashboard-Wr3','Dashboard_Wr3')->name('wr3');
-        Route::get('/Aproval-surat-permohonan-logistik-WR3', 'Approval_Wr3');
-        Route::get('/Detail-surat-permohonan-logistik-WR3-{id}', 'View_Approval_WR3');
-        Route::put('/Approved-Surat-permohonan-logistik-WR3-{id}', 'UpdateApproved_Approval_WR3');
-        Route::put('/Reject-Surat-permohonan-logistik-WR3-{id}', 'UpdateRejected_Approval_WR3');
+        Route::get('/Dashboard-Wr2','Dashboard_Wr2')->name('wr2');
+        Route::get('/Aproval-surat-permohonan-logistik-WR2', 'Approval_Wr2');
+        Route::get('/Detail-surat-permohonan-logistik-WR2-{id}', 'View_Approval_WR2');
+        Route::put('/Approved-Surat-permohonan-logistik-WR2-{id}', 'UpdateApproved_Approval_WR2');
+        Route::put('/Reject-Surat-permohonan-logistik-WR2-{id}', 'UpdateRejected_Approval_WR2');
     });
 });
 

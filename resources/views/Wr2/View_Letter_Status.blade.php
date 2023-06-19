@@ -1,15 +1,15 @@
 @extends('Layouts.Dashboard_Template')
-@section('title', 'APPROVAL INVENTARIS by WR 3')
+@section('title', 'APPROVAL INVENTARIS by WAKIL REKTOR 2')
 @section('menu')
 <ul class="nav">
     <li>
-      <a href="/Dashboard-Wr3">
+      <a href="/Dashboard-Wr2">
         <i class="fas fa-house-user"></i>
         <p class="text-bold"><b>Dashboard</b></p>
       </a>
     </li>
     <li class="active ">
-      <a href="/Aproval-surat-permohonan-logistik-WR3">
+      <a href="/Aproval-surat-permohonan-logistik-WR2">
         <i class="fas fa-user-check"></i>
         <p><b>Approval Letter</b></p>
       </a>
@@ -51,7 +51,7 @@
               
               <div class="row">
                 <div class="col-2">
-                  <form action="/Approved-Surat-permohonan-logistik-WR3-{{ $suratlogistik -> id }}" method="POST">
+                  <form action="/Approved-Surat-permohonan-logistik-WR2-{{ $suratlogistik -> id }}" method="POST">
                     @csrf
                     @method('PUT')
                     <input type="text" name="status_surat_approved" value="Approved" hidden>
@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="col">
-                  <form action="/Reject-Surat-permohonan-logistik-WR3-{{ $suratlogistik -> id }}" method="POST">
+                  <form action="/Reject-Surat-permohonan-logistik-WR2-{{ $suratlogistik -> id }}" method="POST">
                     @csrf
                     @method('PUT')
                     <input type="text" name="status_surat_rejected" value="Rejected" hidden>

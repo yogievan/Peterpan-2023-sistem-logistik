@@ -1,5 +1,5 @@
 @extends('Layouts.Dashboard_Template')
-@section('title', 'APPROVAL INVENTARIS by WAKIL REKTOR 3')
+@section('title', 'APPROVAL INVENTARIS by WAKIL REKTOR 2')
 @section('menu')
 <ul class="nav">
     <li>
@@ -48,7 +48,7 @@
                     <td>{{$sl -> total_harga}}</td>
                     <td>{{$sl -> status_surat}}</td>
                     <td>
-                      <a href="/Detail-surat-permohonan-logistik-WR3-{{ $sl -> id }}">
+                      <a href="/Detail-surat-permohonan-logistik-WR2-{{ $sl -> id }}">
                         <button class="btn btn-warning">Detail</button>
                       </a>
                     </td>

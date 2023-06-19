@@ -1,22 +1,22 @@
 @extends('Layouts.Dashboard_Template')
-@section('title', 'DASHBOARD WR3')
+@section('title', 'DASHBOARD WAKIL REKTOR 2')
 @section('menu')
 <ul class="nav">
     <li class="active ">
-      <a href="/Dashboard-Wr3">
+      <a href="/Dashboard-Wr2">
         <i class="fas fa-house-user"></i>
         <p class="text-bold"><b>Dashboard</b></p>
       </a>
     </li>
     <li>
-      <a href="/Aproval-surat-permohonan-logistik-WR3">
+      <a href="/Aproval-surat-permohonan-logistik-WR2">
         <i class="fas fa-user-check"></i>
         <p><b>Approval Letter</b></p>
       </a>
     </li>
   </ul>
 @endsection
-@section('pages_title', 'Dashboard Wakil Rektor 3 (WR3)')
+@section('pages_title', 'Dashboard WAKIL REKTOR 2 ')
 @section('contents')
 <div class="content">
   <div class="row">
@@ -67,7 +67,7 @@
           <hr>
           <div class="stats">
             <i class="fa fa-calendar"></i>
-            Jumlah surat yang diterima oleh WR 3 (status Approved) Dalam 1 tahun.
+            Jumlah surat yang diterima oleh WAKIL REKTOR 2 (status Approved) Dalam 1 tahun.
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
           <hr>
           <div class="stats">
             <i class="fa fa-calendar"></i>
-            Jumlah surat yang ditolak oleh WR 3 (status Rejected) Dalam 1 tahun.
+            Jumlah surat yang ditolak oleh WAKIL REKTOR 2 (status Rejected) Dalam 1 tahun.
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@
           <div class="stats">
             <i class="fa fa-calendar"></i>
             Jumlah surat yang belum ada status surat / menunggu 
-            persetujuan oleh WR 3 (status Waitting) Dalam 1 tahun.
+            persetujuan oleh WAKIL REKTOR 2 (status Waitting) Dalam 1 tahun.
           </div>
         </div>
       </div>

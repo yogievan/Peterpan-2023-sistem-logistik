@@ -90,6 +90,8 @@ class LogistikController extends Controller
             'nama_kategori' => $request -> input('nama_kategori'),
             'nama_barang' => $request -> input('nama_barang'),
             'jumlah_barang' => $request -> input('jumlah_barang'),
+            'total_harga' => $request -> input('total_harga'),
+            'tgl_pembelian' => $request -> tgl_pembelian,
         ]);
         return redirect('Inventaris-logistik');
     }

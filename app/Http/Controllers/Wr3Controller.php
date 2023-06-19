@@ -10,7 +10,7 @@ use Illuminate\support\Facades\Auth;
 class Wr3Controller extends Controller
 {
     //View Pages
-    public function Dashboard_Wr3()
+    public function Dashboard_Wr2()
     {
         $form = 1;
         $to = 99999999;
@@ -20,7 +20,7 @@ class Wr3Controller extends Controller
         $countApproved = SuratLogistik::where('status_surat','Approved')->whereYear('updated_at', now()->year)->whereBetween('total_harga',[$form, $to])->count('status_surat');
         $countRejected = SuratLogistik::where('status_surat','Rejected')->whereYear('updated_at', now()->year)->whereBetween('total_harga',[$form, $to])->count('status_surat');
         $countWaiting = SuratLogistik::where('status_surat','Waiting')->whereYear('updated_at', now()->year)->whereBetween('total_harga',[$form, $to])->count('status_surat');
-        return view('Wr3.Dashboard_Wr3',[
+        return view('Wr2.Dashboard_Wr2',[
             'transaksilogistik'=>$transaksilogistik,
             'suratlogistik' => $suratlogistik,
             'countAll' => $countAll,
@@ -29,34 +29,34 @@ class Wr3Controller extends Controller
             'countWaiting' => $countWaiting,
         ]);
     }
-    public function Approval_Wr3()
+    public function Approval_Wr2()
     {
         $form = 1;
         $to = 99999999;
         $suratlogistik = SuratLogistik::orderBy('id', 'DESC')->whereBetween('total_harga',[$form, $to])->paginate();
-        return view('Wr3.Approval_Wr3', [
+        return view('Wr2.Approval_Wr2', [
             'suratlogistik' => $suratlogistik,
         ]);
     }
-    public function View_Approval_WR3($id)
+    public function View_Approval_WR2($id)
     {
         $suratlogistik = SuratLogistik::find($id);
-        return view('Wr3.View_Letter_Status', [
+        return view('Wr2.View_Letter_Status', [
             'suratlogistik' => $suratlogistik,
         ]);
     }
-    public function UpdateApproved_Approval_WR3($id, Request $request)
+    public function UpdateApproved_Approval_WR2($id, Request $request)
     {
         $suratlogistik = SuratLogistik::find($id);
         $suratlogistik -> status_surat = $request -> status_surat_approved;
         $suratlogistik-> save();
-        return redirect('Aproval-surat-permohonan-logistik-WR3');
+        return redirect('Aproval-surat-permohonan-logistik-WR2');
     }
-    public function UpdateRejected_Approval_WR3($id, Request $request)
+    public function UpdateRejected_Approval_WR2($id, Request $request)
     {
         $suratlogistik = SuratLogistik::find($id);
         $suratlogistik -> status_surat = $request -> status_surat_rejected;
         $suratlogistik-> save();
-        return redirect('Aproval-surat-permohonan-logistik-WR3');
+        return redirect('Aproval-surat-permohonan-logistik-WR2');
     }
 }

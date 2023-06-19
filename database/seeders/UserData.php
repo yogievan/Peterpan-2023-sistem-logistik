@@ -35,16 +35,16 @@ class UserData extends Seeder
                 'password' => bcrypt('logistik'),
             ],
             [
-                'nama_user' =>'Dr. Ing. Wiyatiningsih, S.T., M.T. ',
+                'nama_user' =>'Dr. Ing. Wiyatiningsih, S.T., M.T.',
                 'role' => 'rektor',
                 'username' => 'rektor',
                 'password' => bcrypt('rektor'),
             ],
             [
-                'nama_user' =>'Dr. Parmonangan Manurung, S.T., M.T., IAI.',
-                'role' => 'wr3',
-                'username' => 'wr3',
-                'password' => bcrypt('wr3'),
+                'nama_user' =>'Ambar Kusuma Astuti, S.E., M.Si.',
+                'role' => 'wr2',
+                'username' => 'wr2',
+                'password' => bcrypt('wr2'),
             ],
             [
                 'nama_user' =>'Nama User Biro 2 UKDW',

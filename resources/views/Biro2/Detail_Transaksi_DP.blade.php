@@ -83,7 +83,7 @@
                       <p class="card-category text-danger">Note: *Pembayaran DP terlebih dahulu jika barang telah sampai <b>WAJIB</b> melakukan pelunasan.</p>
                   </div>
                 </div>
-                <button class="btn btn-success text-uppercase" onclick="return confirm('Pastikan Nominal Uang Sudah Sesuai dengan Bukti Bayar!')">Payment Prosses</button>
+                <button class="btn btn-success text-uppercase" onclick="return confirm('Pastikan Nominal Uang Sudah Sesuai dengan Bukti Bayar!')">Payment Process</button>
               </form>
             </div>
           </div>

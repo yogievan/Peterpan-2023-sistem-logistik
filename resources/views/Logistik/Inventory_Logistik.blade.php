@@ -20,12 +20,12 @@
             <p><b>Inventory</b></p>
           </a>
         </li>
-        <li>
+        {{-- <li>
           <a href="/Create-user">
               <i class="fas fa-users"></i>
               <p><b>Create Users</b></p>
           </a>
-      </li>
+      </li> --}}
   </ul>
 @endsection
 @section('pages_title', 'Inventory of Goods')
@@ -45,16 +45,20 @@
                 <th scope="col">Nama Kategori</th>
                 <th scope="col">Nama Barang / Jasa</th>
                 <th scope="col">Jumlah Barang / Jasa</th>
+                <th scope="col">Total Harga</th>
+                <th scope="col">Tanggal Pembelian</th>
                 <th scope="col">ACTION</th>
             </tr>
             </thead>
             <tbody>
             @foreach ($barang as $no => $b)
                 <tr class="text-capitalize">
-                    <td class="text-center">{{$b -> id}}</td>
+                    <td>{{$b -> id}}</td>
                     <td>{{$b -> nama_kategori}}</td>
                     <td>{{$b -> nama_barang}}</td>
-                    <td>{{$b -> jumlah_barang}}</td>
+                    <td class="text-center">{{$b -> jumlah_barang}} Unit</td>
+                    <td> Rp {{$b -> total_harga}}</td>
+                    <td class="text-center">{{$b -> tgl_pembelian}}</td>
                     <td>
                       <a href="/Update-inventaris-logistik-{{ $b -> id }}" class="btn btn-success fas fa-file-edit" title="Upgrade/Edit"></a>
                       <a href="/Delete-inventory-logistik-{{ $b -> id }}" class="btn btn-danger fas fa-trash-alt" title="Delete" onclick="return confirm('Anda Yakin Menghapus Barang/Jasa?')"></a>

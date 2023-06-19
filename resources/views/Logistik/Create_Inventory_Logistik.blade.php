@@ -20,12 +20,12 @@
         <p><b>Inventory</b></p>
       </a>
   </li>
-  <li>
+  {{-- <li>
       <a href="/Create-user">
           <i class="fas fa-users"></i>
           <p><b>Create Users</b></p>
       </a>
-  </li>
+  </li> --}}
 </ul>
 @endsection
 @section('pages_title', 'Create Inventory for New Transaction of Goods')
@@ -46,6 +46,14 @@
           <div class="form-floating mt-3">
             <label for="floatingInput"><b>Kuantitas (Qty)</b></label>
             <input type="number" name="jumlah_barang" class="form-control" id="floatingInput" placeholder="Qty" value="{{ $barang-> jumlah_barang }}" readonly>
+          </div>
+          <div class="form-floating mt-3">
+            <label for="floatingInput"><b>Total Harga</b></label>
+            <input type="number" name="total_harga" class="form-control" id="floatingInput" placeholder="Qty" value="{{ $barang-> total_harga }}" readonly>
+          </div>
+          <div class="form-floating mt-3">
+            <label for="floatingInput"><b>Tanggal Beli</b></label>
+            <input type="date" name="tgl_pembelian" class="form-control" id="floatingInput" placeholder="Qty">
           </div>
       </div>
       <div class="form-floating mt-4">

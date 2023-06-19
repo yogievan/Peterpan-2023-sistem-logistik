@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('nama_kategori');
             $table->string('nama_barang');
             $table->integer('jumlah_barang');
+            $table->integer('total_harga');
+            $table->string('tgl_pembelian');
             $table->timestamps();
         });
     }

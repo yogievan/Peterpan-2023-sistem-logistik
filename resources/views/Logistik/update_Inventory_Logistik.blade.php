@@ -20,12 +20,12 @@
         <p><b>Inventory</b></p>
       </a>
   </li>
-  <li>
+  {{-- <li>
       <a href="/Create-user">
           <i class="fas fa-users"></i>
           <p><b>Create Users</b></p>
       </a>
-  </li>
+  </li> --}}
 </ul>
 @endsection
 @section('pages_title', 'Update Inventory')
